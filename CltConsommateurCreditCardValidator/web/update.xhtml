@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <h2>Modifier une carte de crédit</h2>
+        <hr/>
+        <h:form>
+                <h1><h:outputText value="Create/Edit"/></h1>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="Credit Card number:" for="number" />
+                    <h:inputText id="number" value="#{clientMB.cc.number}" title="Number" />
+                    <h:outputLabel value="Expiry Date :" for="expiryDate" />
+                    <h:inputText id="expiryDate" value="#{clientMB.cc.expiryDate}" title="ExpiryDate" />
+                    <h:outputLabel value="Code de vérification :" for="cn" />
+                    <h:inputText id="cn" value="#{clientMB.cc.cn}" title="Cn" />
+                    <h:outputLabel value="Type:" for="type" />
+                    <h:inputText id="type" value="#{clientMB.cc.type}" title="Type" />
+                </h:panelGrid>
+                <h:commandButton action="#{clientMB.create()}"/>
+            </h:form>
+    </h:body>
+</html>
+

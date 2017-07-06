@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Gestion des logiciels</title>
+    </h:head>
+    <h:body>
+        <h1>Créer un nouveau logiciel</h1>
+        <hr/>
+        <h:form>
+            <h:panelGrid columns="2" >
+                <h:outputLabel value="ID:"/>
+                <h:inputText value="#{logicielController.logiciel.id}"/>
+                <h:outputLabel value="Nom :"/>
+                <h:inputText value="#{logicielController.logiciel.nom}"/>
+                <h:outputLabel value="Version : "/>
+                <h:inputText value="#{logicielController.logiciel.version}"/>
+                
+            </h:panelGrid>
+            <h:commandButton value="Créer" action="#{logicielController.doCreateLogiciel}"/>
+
+        </h:form>
+        <hr/>
+    </h:body>
+</html>
+

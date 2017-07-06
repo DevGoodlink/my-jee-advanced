@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Gestion des attestations</title>
+        <h:outputStylesheet name="css/jsfcrud.css"/>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="resources/css/bootstrap.min.css" />
+
+        <!-- Optional theme -->
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="resources/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <style>
+            body{
+                background-image: url(resources/img/bg.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+
+            }
+            .blanc{
+                color: white;
+                font-size: 1.6em;
+                text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+                font-weight: bold;
+            }
+            .blanc_h1{
+                text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+                font-weight: bold;
+                color:white;
+            }
+            .buffer_right{
+                margin-right: 20px;
+                float: right;
+            }
+            .buffer{
+                height: 100px;
+            }
+            .logbtn{
+                border : 1px;
+                border-radius:10px;
+                float: left;
+                color:whitesmoke;
+                background-color: #9999ff;
+            }
+            .logbtn:hover{
+                opacity: 0.2;
+                color : #9999ff;
+                background-color: whitesmoke;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <div class="container">
+            <div class="row">
+                <div class="buffer">
+
+                </div>
+                <div class="buffer">
+
+                </div>
+                <h1 class="blanc_h1">Bienvenue</h1>
+
+                <div class="col-md-8" style="background-color:rgba(0,0,0,.2);" >
+
+                    <p class="text-left blanc" >  L'application de gestion des attestations permet le suivi de delivrance des attestations de stage.</p>
+                    <p class="text-left blanc">  Les stagiaires à l'issue de leur stage, peuvent demander via cette application, l'octroi d'une attestation.</p>
+                    <p class="text-left blanc"> l'entreprise peut gérer l'édition de l'attestation à l'aide de cette application.</p>
+
+                </div>
+                <div class="col-md-4 ">
+                    <h:panelGrid columns="3">
+                        <h:form>
+                            <h:column><h:commandButton action="tologin" value="Accés admin" styleClass="btn btn-primary btn-lg"/></h:column>
+                            <h:column>&nbsp;&nbsp;</h:column>
+                            <h:column><h:commandButton action="todemande" value="Accés Stagiaire" styleClass="btn btn-success btn-lg"/></h:column>
+
+                        </h:form>
+
+                    </h:panelGrid>
+
+
+
+                </div>
+            </div>
+
+        </div>
+        <br />
+
+    </h:body>
+</html>
+

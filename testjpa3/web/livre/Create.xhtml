@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.CreateLivreTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="#{bundle.CreateLivreLabel_idLivre}" for="idLivre" />
+                    <h:inputText id="idLivre" value="#{livreController.selected.idLivre}" title="#{bundle.CreateLivreTitle_idLivre}" required="true" requiredMessage="#{bundle.CreateLivreRequiredMessage_idLivre}"/>
+                    <h:outputLabel value="#{bundle.CreateLivreLabel_titre}" for="titre" />
+                    <h:inputText id="titre" value="#{livreController.selected.titre}" title="#{bundle.CreateLivreTitle_titre}" required="true" requiredMessage="#{bundle.CreateLivreRequiredMessage_titre}"/>
+                    <h:outputLabel value="#{bundle.CreateLivreLabel_idAuteur}" for="idAuteur" />
+                    <h:inputText id="idAuteur" value="#{livreController.selected.idAuteur}" title="#{bundle.CreateLivreTitle_idAuteur}" required="true" requiredMessage="#{bundle.CreateLivreRequiredMessage_idAuteur}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{livreController.create}" value="#{bundle.CreateLivreSaveLink}" />
+                <br />
+                <br />
+                <h:commandLink action="#{livreController.prepareList}" value="#{bundle.CreateLivreShowAllLink}" immediate="true"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.CreateLivreIndexLink}"/>
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>

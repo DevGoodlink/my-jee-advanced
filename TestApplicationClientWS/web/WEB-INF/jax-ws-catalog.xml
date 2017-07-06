@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="https://yassalie-pc:8181/TestApplicationWS/HelloWS?wsdl" uri="wsdl/yassalie-pc_8181/TestApplicationWS/HelloWS.wsdl"/>
+    <system systemId="https://yassalie-pc:8181/TestApplicationWS/HelloWS?xsd=1" uri="wsdl/yassalie-pc_8181/TestApplicationWS/HelloWS.xsd_1.xsd"/>
+</catalog>

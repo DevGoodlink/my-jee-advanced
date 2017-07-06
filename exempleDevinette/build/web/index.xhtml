@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+    <f:view>
+        
+            <h1>Jeu devinette</h1>
+            <hr/>
+            <h:form>
+                <h4>Veuillez deviner un nombre entre 1 et 10</h4>
+                <h4><h:outputLabel>Entrer votre nombre ici :</h:outputLabel><h:inputText value="#{numberManagedBean.valeur}"></h:inputText></h4>
+                <h4><h:outputLabel value="#{numberManagedBean.messageTentative}"></h:outputLabel></h4>
+                <h:commandButton value="Tenter" action="#{numberManagedBean.doVerification()}"></h:commandButton>
+            </h:form>
+            <hr/>
+            <h4><h:outputLabel value="#{numberManagedBean.messageFinale}"></h:outputLabel></h4>
+        
+    </f:view>
+    </h:body>
+</html>
+

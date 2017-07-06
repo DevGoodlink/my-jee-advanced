@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    <navigation-rule>
+        <description>Navigation globale vers Index</description>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>toindex</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <description>Navigation globale vers succes</description>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>tosuccess</from-outcome>
+            <to-view-id>/success.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <description>Navigation globale vers demande</description>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>todemande</from-outcome>
+            <to-view-id>/demande.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <description>Navigation globale vers liste demande</description>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>tolistdemande</from-outcome>
+            <to-view-id>/secretaire.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <description>Navigation globale vers liste demande</description>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>tologin</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+     <navigation-rule>
+        <description>Navigation globale vers Admin</description>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>toadmin</from-outcome>
+            <to-view-id>/admin.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    
+</faces-config>

@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="./template.xhtml">
+
+            <ui:define name="content">
+                Création de produit
+                <hr/>
+                <h:form>
+                    <h:panelGrid columns="2">
+                        <h:outputLabel id="fieldLabelID" for="fieldID" value="Product ID" />
+                        <h:inputText id="fieldID" value="#{catalogueManager.id}" />
+                        <h:outputLabel id="fieldPorductName" for="productName" value="Product Name" />
+                        <h:inputText id="productName" value="#{catalogueManager.name}" />
+                        <h:outputLabel id="fieldPorductPrice" for="productPrice" value="Product Price" />
+                        <h:inputText id="productPrice" value="#{catalogueManager.price}" />
+                    </h:panelGrid>
+                    <h:commandButton action="#{catalogueManager.createProduct()}" value="Enregistrer"/>
+                    <hr/>
+                    <h:commandLink action="toindex" value="Accueil"/>
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

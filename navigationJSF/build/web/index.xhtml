@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Navigation par navigation key</title>
+    </h:head>
+    <h:body>
+        <h2>Exemple de navigation par clé de navigation</h2>
+        <h1>Mathématique pour le primaire</h1>
+        <h:form>
+            
+            <h:outputLabel for="op1">1er opérande</h:outputLabel>
+            <h:inputText id="op1" value="#{beanOperationController.op1}"></h:inputText>
+            <br></br>
+            <h:outputLabel for="op2">2ème opérande</h:outputLabel>
+            <h:inputText id="op2" value="#{beanOperationController.op2}"></h:inputText>
+            <hr></hr>
+            <h:commandButton action="plus" title="avec clé de navigation plus" value="+"></h:commandButton>
+            <h:commandButton action="moins" title="avec clé de navigation moins" value="-"></h:commandButton>
+            <h:commandButton action="#{beanOperationController.getSomme()}" title="avec méthode getSomme" value="+++"></h:commandButton>
+            <h:commandButton action="#{beanOperationController.getDifference()}" title="avec méthode getDifférence" value="---"></h:commandButton>
+        </h:form>
+    </h:body>
+</html>
+

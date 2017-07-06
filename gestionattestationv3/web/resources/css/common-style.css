@@ -1,0 +1,48 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 11 janv. 2017, 23:32:40
+    Author     : YASSALIE
+*/
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+.vbuffer{
+    height:20px;
+}
+.dialog{
+    border: 1px;
+    border-radius: 5px;
+    background: whitesmoke;
+    padding: 30px;
+}
+.titre{
+    text-align: center;
+}
+.top-head{
+    background: slateblue;
+    height: 100px;
+}
+.side-menu{
+    background: darkorange;
+    height: 500px;
+}
+.thumbnail {
+    position: relative;
+    padding: 0px;
+    margin-bottom: 20px;
+}
+.bordered{
+    border: 1px solid ;
+    margin-right: 5px;
+    padding: 50px;
+}

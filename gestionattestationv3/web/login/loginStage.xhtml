@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    
+    <h:head>
+        <title>Gestion des attestation</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="resources/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="resources/css/bootstrap-theme.min.css" />
+        <link rel="stylesheet" href="resources/css/loginStyle.css" />
+        <!-- Optional theme -->
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="resources/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://use.fontawesome.com/2ac2c5a436.js"></script>
+    </h:head>
+    <h:body>
+
+        <div class="container">
+            <div class="vbuffer"/>
+            <div class="vbuffer"/>
+            <div class="vbuffer"/>
+
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 dialog">
+                    <div class="titre">
+                        <h1>
+                        <div class="text-center ">GESTION DES ATTESTATIONS<hr/>BIENVENUE</div></h1>
+                    </div>
+
+                    <div class="vbuffer"/>
+
+                    <h:form>
+                        <div class="form-group">
+                            <label>Code Stagiaire</label>
+                            <h:inputText id="txtCode" value="#{stageMB.code}" styleClass="form-control"/>
+                            <h:message for="txtlogin" styleClass="error"></h:message>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Votre Email</label>
+                            <h:inputText id="txtEmail" value="#{stageMB.mail}" styleClass="form-control"/>
+                            <h:message for="txtpassword" styleClass="error"></h:message>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Entrer les 5 caractères ci-dessous</label>
+                            <h:inputText id="txtCaptcha" value="#{stageMB.generatedCaptcha}" styleClass="form-control"/>
+                            <h:message for="txtCaptcha" styleClass="error"></h:message>
+                        </div>
+                        <div class="form-group">
+                            <h:outputText value="#{captcha.captcha}" styleClass="text-center captcha"/>
+                        </div>
+                        <div class="col-md-6 col-md-offset-3">
+                            <h:commandButton  action="home" id="btnValidate" value="Valider" styleClass="btn btn-primary">
+                                
+                            </h:commandButton>
+                                &nbsp;&nbsp;
+                            <h:button id="btnReset" value="Réinitialiser" styleClass=" btn btn-primary btn-success"/>
+                            <h:message for="btnValidate" styleClass="error"></h:message>
+                        </div>
+                    </h:form>
+                </div>
+            </div>
+
+        </div>
+
+    </h:body>
+</html>
+

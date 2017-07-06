@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./_Layout.xhtml">
+
+            <ui:define name="content">
+                <f:view>
+                    <h:form>
+                        <h1><h:outputText value="Ajout d'une demande"/></h1>
+                        <h:panelGrid columns="2">
+                            <h:outputLabel value="Nom:" for="nom" />
+                            <h:inputText id="nom" value="#{controller.demande.nom}" title="Nom" />
+                            <h:outputLabel value="Prenom:" for="prenom" />
+                            <h:inputText id="prenom" value="#{controller.demande.prenom}" title="Prenom" />
+                            <h:outputLabel value="Email:" for="email" />
+                            <h:inputText id="email" value="#{controller.demande.email}" title="Email" />
+                            <h:outputLabel value="Sujet Stage:" for="sujetStage" />
+                            <h:inputText id="sujetStage" value="#{controller.demande.sujetStage}" title="SujetStage" />
+                            <h:outputLabel value="Date Debut:" for="dateDebut" />
+                            <h:inputText id="dateDebut" value="#{controller.demande.dateDebut}" title="DateDebut" >
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:inputText>
+                            <h:outputLabel value="Date Fin:" for="dateFin" />
+                            <h:inputText id="dateFin" value="#{controller.demande.dateFin}" title="DateFin" >
+                                <f:convertDateTime pattern="MM/dd/yyyy" />
+                            </h:inputText>
+                            <h:outputLabel value="Description:" for="description" />
+                            <h:inputText id="description" value="#{controller.demande.description}" title="Description" />
+                            <h:outputLabel value="Etablissement:" for="etablissement" />
+                            <h:inputText id="etablissement" value="#{controller.demande.etablissement}" title="Etablissement" />
+                        </h:panelGrid>
+                    </h:form>
+
+                    
+                </f:view>
+
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

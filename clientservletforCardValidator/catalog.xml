@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://YASSALIE-PC:8080/CardValidatorws/CardValidator?wsdl" uri="src/conf/xml-resources/web-service-references/CardValidator/wsdl/YASSALIE-PC_8080/CardValidatorws/CardValidator.wsdl"/>
+    <system systemId="http://YASSALIE-PC:8080/CardValidatorws/CardValidator?xsd=1" uri="src/conf/xml-resources/web-service-references/CardValidator/wsdl/YASSALIE-PC_8080/CardValidatorws/CardValidator.xsd_1.xsd"/>
+</catalog>

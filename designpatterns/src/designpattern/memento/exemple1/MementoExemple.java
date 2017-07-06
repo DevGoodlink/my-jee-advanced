@@ -1,0 +1,26 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package designpattern.memento.exemple1;
+
+/**
+ *
+ * @author Imad
+ */
+public class MementoExemple {
+    public static void main(String[] args) {
+        CareTaker caretaker = new CareTaker();
+ 
+        Originator originator = new Originator();
+        originator.set("State1");
+        originator.set("State2");
+        caretaker.addMemento( originator.saveToMemento() );
+        originator.set("State3");
+        caretaker.addMemento( originator.saveToMemento() );
+        originator.set("State4");
+ 
+        originator.restoreFromMemento( caretaker.getMemento(1) );
+    }
+}

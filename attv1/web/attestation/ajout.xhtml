@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <body>
+
+        <ui:composition template="./../WEB-INF/templates/template.xhtml">
+
+            <ui:define name="content">
+                <h:form>
+                    <h:panelGrid>
+                        
+                    </h:panelGrid>
+                    <h:outputLabel>Id</h:outputLabel>
+                    <h:inputText value ="#{demande.id}"></h:inputText>
+                    <h:outputLabel>Date demande</h:outputLabel>
+                    <h:inputText value ="#{demande.dde}"></h:inputText>
+                    <h:outputLabel>Etat</h:outputLabel>
+                    <h:inputText value ="#{demande.etat}"></h:inputText>
+                    <h:outputLabel>User</h:outputLabel>
+                    <h:inputText value ="#{demande.userid}"></h:inputText>
+                    <h:commandButton value="Ajouter" action="#{demande.createDemande()}"/>
+                </h:form>
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

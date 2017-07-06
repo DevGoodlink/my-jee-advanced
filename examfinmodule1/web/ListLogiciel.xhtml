@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>Liste des logiciels</title>
+    </h:head>
+    <h:body>
+        <h1>Liste des logiciels</h1>
+        <hr/>
+        <h:dataTable value="#{logicielController.logicielList}" var="logiciel" border="1">
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="ID"/>
+                </f:facet>
+                <h:outputText value="#{logiciel.id}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Nom"/>
+                </f:facet>
+                <h:outputText value="#{logiciel.nom}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Version"/>
+                </f:facet>
+                <h:outputText value="#{logiciel.version}"/>
+            </h:column>
+            <h:column>
+                <f:facet name="header">
+                    <h:outputText value="Edition"/>
+                </f:facet>
+                <h:outputText value="#{logiciel.id}"/>
+            </h:column>
+        </h:dataTable>
+        <h:form>
+            <h:link outcome="NewLogiciel.xhtml" value="Créer un nouveau logiciel"/>
+        </h:form>
+        <hr/>
+    </h:body>
+</html>
+

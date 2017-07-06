@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://yassalie-pc:8080/ccwsentity/CardValidator?WSDL" uri="wsdl/yassalie-pc_8080/ccwsentity/CardValidator.wsdl"/>
+    <system systemId="http://yassalie-pc:8080/ccwsentity/CardValidator?xsd=1" uri="wsdl/yassalie-pc_8080/ccwsentity/CardValidator.xsd_1.xsd"/>
+</catalog>

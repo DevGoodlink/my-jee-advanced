@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    
+    <navigation-rule>
+        <description>Navigation globale vers Index</description>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>toindex</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <description>Navigation globale vers product_create</description>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>tocreate</from-outcome>
+            <to-view-id>/product_create.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <description>Navigation globale vers catalogue</description>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>tocatalogue</from-outcome>
+            <to-view-id>/catalogue.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <description>Navigation globale vers shoppingCart</description>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>toshoppingcart</from-outcome>
+            <to-view-id>/shoppingCart.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+</faces-config>

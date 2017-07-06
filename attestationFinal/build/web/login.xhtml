@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <link rel="stylesheet" href="resources/css/bootstrap.css" />
+
+        <!-- Optional theme -->
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="resources/js/bootstrap.min.js" ></script>
+        
+
+        <script src="https://use.fontawesome.com/2ac2c5a436.js"></script>
+    </h:head>
+    <h:body>
+        <style>
+            body{
+                background-image: url(resources/img/bg-login.jpg);
+                                background-size: cover;
+
+            }
+        </style>
+        <div class="container">
+            <video id="bgvid" playsinline="true" autoplay="true" muted="true" loop="true" 
+                   src="asset/videos/video_background.mp4" type="video/mp4">
+                <!-- WCAG general accessibility recommendation is that media such as background video play through only once. Loop turned on for the purposes of illustration; if removed, the end of the video will fade in the same way created by pressing the "Pause" button  -->
+            </video>
+            <div class="vbuffer"/>
+            <div class="vbuffer"/>
+            <div class="vbuffer"/>
+
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 dialog">
+                    <div class="titre">
+                        <h1>GESTION DES ATTESTATIONS</h1>
+                                                <hr/>
+                        <h2>Bienvenu</h2>
+                    </div>
+
+                    <div class="vbuffer"/>
+
+                    <h:form>
+                        <div class="form-group">
+                            <label>Login</label>
+                            <h:inputText id="txtlogin" value="#{controller.login}" styleClass="form-control"/>
+                            <h:message for="txtlogin" styleClass="error"></h:message>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Mot de passe</label>
+                            <h:inputSecret id="txtpassword" value="#{controller.password}" styleClass="form-control"/>
+                            <h:message for="txtpassword" styleClass="error"></h:message>
+                        </div>
+                        <div class="col-md-6 col-md-offset-3">
+                            <h:commandButton action="#{controller.authentificate}" id="btnValidate" value="Valider" styleClass="btn btn-primary"/>&nbsp;&nbsp;
+                            
+                            <h:button id="btnReset" value="Réinitialiser" styleClass="btn btn-primary btn-success"/>
+                            <br/>
+                            <h:outputText value="#{userController.erreur}" class="alert-danger"></h:outputText>
+                        </div>
+                     </h:form>
+                </div>
+            </div>
+
+        </div>
+
+    </h:body>
+</html>
+

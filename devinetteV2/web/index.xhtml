@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Devinette v2.0</title>
+        <style>
+            .error{
+                
+                color: #660000;
+                background-color: antiquewhite;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <h1>Bienvenue sur devinette 2.0</h1>
+        <p>
+            <h:outputLabel value="Veuillez entrer un nombre entre 1 et 10"></h:outputLabel> <br/>
+            <h:form>
+                <h:inputText value="#{beanNumberController.valeur}" id="nbr" binding="#{beanNumberController.txtValeur}">
+                    <f:validateLongRange minimum="1" maximum="10"/>
+                </h:inputText>
+                <br/>
+                <h:message for="nbr" styleClass="error"></h:message>
+                <br/>
+                <h:outputText value="Tentative #{beanNumberController.tentative} fois"/><br/>
+                <h:commandButton value="Valider votre choix" action="#{beanNumberController.doVerification}" binding="#{beanNumberController.btnValidate}"/>
+                <h:commandButton value="Recommencer" action="#{beanNumberController.recommencer}" binding="#{beanNumberController.btnRecommencer}"/>
+                <hr/>
+                
+                <h:outputText value="#{beanNumberController.progression}"/><br/>
+            </h:form>
+        </p>
+        
+    </h:body>
+</html>
+

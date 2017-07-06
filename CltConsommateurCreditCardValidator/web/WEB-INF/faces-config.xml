@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+<navigation-rule>
+        <description>Navigation globale vers Index</description>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>toindex</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <description>Navigation globale vers create</description>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>tocreate</from-outcome>
+            <to-view-id>/create.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <description>Navigation globale vers delete</description>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>todelete</from-outcome>
+            <to-view-id>/delete.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <description>Navigation globale vers update</description>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>toupdate</from-outcome>
+            <to-view-id>/update.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <description>Navigation globale vers validate</description>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>tovalidate</from-outcome>
+            <to-view-id>/validate.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+</faces-config>

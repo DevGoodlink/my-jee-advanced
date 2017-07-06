@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <body>
+
+        <ui:composition template="./_Layout.xhtml">
+
+            <ui:define name="content">
+
+                <f:view>
+
+
+                    <h:form>
+                        <div class="form-horizontal">
+                            <h1><h:outputText value="Ajouter une Demande"/></h1>
+                            <hr />
+                              <h:outputText value="#{controller.erreur}" class="alert-danger"></h:outputText>
+                            <div class="form-group">
+                                <label class="control-label col-md-2" for="nom">Nom </label>
+                                <div class="col-md-4">
+                                    <h:inputText id="nom" value="#{controller.demande.nom}"  class="form-control" title="Nom" />
+                                </div>
+                            </div> 
+
+                            <div class="form-group">
+                                <label class="control-label col-md-2" for="prenom">Prenom</label>
+                                <div class="col-md-4">
+                                    <h:inputText id="prenom" value="#{controller.demande.prenom}" class="form-control" title="Prenom" />
+                                </div>
+                            </div> 
+
+                            <div class="form-group">
+                                <label class="control-label col-md-2" for="email">Email</label>
+                                <div class="col-md-4">
+                                    <h:inputText id="email" value="#{controller.demande.email}" class="form-control" title="Email" />
+                                </div>
+                            </div> 
+
+                            <div class="form-group">
+                                <label class="control-label col-md-2" for="sujetStage">Sujet de Stage</label>
+                                <div class="col-md-4">
+                                    <h:inputText id="sujetStage" value="#{controller.demande.sujetStage}" class="form-control" title="SujetStage" />
+                                </div>
+                            </div> 
+                              <div class="form-group">
+                                <label class="control-label col-md-2" for="dateDebut">Date de Debut</label>
+                                <div class="col-md-4">
+                                    <h:inputText id="dateDebut" value="#{controller.demande.dateDebut}" class="form-control" title="DateDebut" >
+                                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                                    </h:inputText>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-2" for="dateFin">Date de Fin</label>
+                                <div class="col-md-4">
+                                    <h:inputText id="dateFin" value="#{controller.demande.dateFin}" class="form-control" title="DateFin" >
+                                        <f:convertDateTime pattern="MM/dd/yyyy" />
+                                    </h:inputText>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-2" for="description">Description de Stage</label>
+                                <div class="col-md-4">
+                                    <h:inputTextarea  id="description" value="#{controller.demande.description}" class="form-control" title="Description" />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-md-2" for="etablissement">Etablissement</label>
+                                <div class="col-md-4">
+                                    <h:inputText id="etablissement" value="#{controller.demande.etablissement}" class="form-control" title="Etablissement" />
+                                </div>
+                            </div>  
+
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-4 ">
+                                    <input type="reset" value="Effacer" class="btn btn-default"/>&emsp;&ensp;
+                                    <h:commandButton action="#{controller.doCreate}" id="btnValidate" value="Ajouter" class="btn btn-primary"/>
+                                    <h:commandButton action="#{controller.comeback}" value="Annuler" class="btn btn-danger"/>
+                                    
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </h:form>
+                </f:view>
+
+
+            </ui:define>
+           
+        </ui:composition>
+
+    </body>
+</html>
