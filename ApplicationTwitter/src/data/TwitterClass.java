@@ -37,10 +37,10 @@ public class TwitterClass {
             e.printStackTrace();
         }
         confbuilder = new ConfigurationBuilder();
-        confbuilder.setOAuthAccessToken(prop.getProperty("oauth.accessToken"))//"252311492-cIbiCQkmwoZgaAHdlrV4DmkiBx0EJMiYNYKpMqkp") 
-                .setOAuthAccessTokenSecret(prop.getProperty("oauth.accessTokenSecret"))//"jNaL0DBRic525gpFhSuk9bM0FxD5vu3tbNVzZBcLUPaEN") 
-                .setOAuthConsumerKey(prop.getProperty("oauth.consumerKey"))//"Wuj6JEuw9a4myPXiayqKC1oHG") 
-                .setOAuthConsumerSecret(prop.getProperty("oauth.consumerSecret"));//"qCfskrdxhGtWlAEZgwHrdiyhttjbc3terqUWP7m9vXjDtbHoiD"); 
+        confbuilder.setOAuthAccessToken(prop.getProperty("oauth.accessToken")) 
+                .setOAuthAccessTokenSecret(prop.getProperty("oauth.accessTokenSecret"))
+                .setOAuthConsumerKey(prop.getProperty("oauth.consumerKey"))
+                .setOAuthConsumerSecret(prop.getProperty("oauth.consumerSecret"));
     }
 
     public static List<String> getAllTweetList(String queryString) {
@@ -58,20 +58,10 @@ public class TwitterClass {
                 listTweets.add(user+text);
             }
             return listTweets;
-            /*do {
-            result = twitter.search(query);
-            List<Status> tweets = result.getTweets();
-
-            /*for (Status tweet : tweets) {
-                System.out.println("@" + tweet.getUser().getScreenName() + " - " + tweet.getText());
-            }
-            System.out.println("Fin traitement");
-        } while ((query = result.nextQuery()) != null);
-        /*System.exit(0);*/
+           
         } catch (TwitterException te) {
             te.printStackTrace();
-            /*System.out.println("Failed to search tweets: " + te.getMessage());
-        System.exit(-1);*/
+            
             return null;
         }
 
