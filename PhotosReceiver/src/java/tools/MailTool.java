@@ -61,7 +61,7 @@ public class MailTool {
             
             courier.setContent(multipart);
             Transport tp = session.getTransport("smtp");
-            tp.connect("smtp.gmail.com","goodlink.fes","nathalie40");
+            tp.connect("smtp.gmail.com","goodlink.fes","***password***");
             System.out.println("passs");
             tp.sendMessage(courier, courier.getAllRecipients());
             System.out.println("Ok apres SendMesage");
